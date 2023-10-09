@@ -1,6 +1,62 @@
 <!-- templates/home.html -->
 {% extends "base.html" %}
 {% block content %}
-<h1>Homepage</h1>
+<style>
+    .container{
+        /* border: 1px solid #000; 1px thin border with a solid black color */
+        #padding: 10px; 
+        padding-top: 50px;
+        margin-top: 50px;
+        width : 70%;
+        margin: 0 auto;
+        /* background-color : white; */
+        background-color: #f0eaed;
+        height: 100vh;
+    }
+    .calculator{
+     /* border: 1px solid #000; 1px thin border with a solid black color */
+        border-top: 1px solid #000; /* 1px top border with a solid black color */
+        border-bottom: 1px solid #000; /* 1px bottom border with a solid black color */
+        padding: 10px; 
+        width: 60%;
+        margin: 0 auto;
+        /* background-color: white; */
+        background-color: #f0eaed;
+        height: 40vh;
+        text-align:center;
+    }
+    .description{
+        /* background-color: yellow; */
+        background-color: #f0eaed;
+        border-bottom: 1px solid #000; /* 1px thin border with a solid black color */
+        /* padding-top: 10px;  */
+        width: 60%;
+        margin: 10 auto;
+        padding: 10px;
+        height: 40vh;
+        text-align:center;
+    }
+</style>
+
+<div class="container">
+    <div class="calculator">
+        <h2>Plaster Estimator</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">ESTIMATE</button>
+        </form>
+        {% if plaster_amount %}
+            <p>Plaster Amount Needed: {{ plaster_amount }}</p>
+        {% endif %}
+    </div>
+<div class = "description">
+    {% if plaster_amount %}
+        <p>{{plaster_description}}</p>
+    {% endif %}
+</div>
+</div>
+
+
 
 {% endblock content %}

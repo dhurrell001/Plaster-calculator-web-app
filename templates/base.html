@@ -1,36 +1,13 @@
 <!-- template/base.html -->
+{%load static%}
 <style>
-    header{
-        /* width: 70%; */
-        margin: 0 auto;
-    }
-    body{
-        /* background-color: darkblue; */
-        background-color: #f0eaed;
-        margin-top: 0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .heading{
-
-        
-        background-color: #e0d5db;
-        text-align: center;
-        /* border-bottom: 1px solid black; */
-        margin: 0;
-        padding-top: 10px;
-    }
-    .navigation{
-        text-align: left;
-        /* background-color: beige; */
-        background-color: #e0d5db;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
-    }
-    h1{
-        /* padding-top: 5px; */
-        margin: 0;
-    }
+   
 </style>
+<head>
+    <link rel="stylesheet" href="{% static 'calculator/styles.css' %}">
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/other_styles.css' %}"> -->
+</head>
 <header>
     <div class= "heading">
         <h1>PlasterPro</h1>

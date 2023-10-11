@@ -1,0 +1,109 @@
+header{
+    /* width: 70%; */
+    margin: 0 auto;
+}
+body{
+    /* background-color: darkblue; */
+    background-color: #f0eaed;
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading{
+
+    
+    background-color: #e0d5db;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    margin: 0;
+    padding-top: 10px;
+}
+.navigation{
+    text-align: left;
+    /* background-color: beige; */
+    background-color: #e0d5db;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+h1{
+    /* padding-top: 5px; */
+    margin: 0;
+} 
+
+/* home page css */
+.container{
+    /* border: 1px solid #000; 1px thin border with a solid black color */
+    /* padding: 10px;  */
+    padding-top: 50px;
+    margin-top: 50px;
+    width : 70%;
+    margin: 0 auto;
+    /* background-color : white; */
+    background-color: #f0eaed;
+    height: 100vh;
+}
+.calculator{
+ /* border: 1px solid #000; 1px thin border with a solid black color */
+    border-top: 1px solid #000; /* 1px top border with a solid black color */
+    border-bottom: 1px solid #000; /* 1px bottom border with a solid black color */
+    margin-bottom: 30px;
+    padding: 10px; 
+    width: 70%;
+    margin: 10 auto;
+    /* background-color: white; */
+    background-color: #f0eaed;
+    height: auto;
+    text-align:center;
+}
+.description{
+    /* background-color: yellow; */
+    background-color: #f0eaed;
+    border-bottom: 1px solid #000; /* 1px thin border with a solid black color */
+    /* padding-top: 10px;  */
+    width: 60%;
+    margin: 20 auto;
+    font-size: 13.3px;
+    
+    /* height: 40vh; */
+    height:30vh;
+    text-align:center;
+}
+.reset-link {
+    display: inline-block;
+    padding: 2px;
+    background-color: #e5e1e1;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    font-size: 13.3px;
+}
+
+.reset-link:hover {
+    background-color: #eee;
+}
+
+/* about page css */
+/* Target the unordered list with the "custom-list" class */
+.custom-list {
+    /* list-style-type: disc; You can change the list style type */
+    padding-left: 20px;   /* Add padding to the left of the list */
+    list-style-type: none;
+
+}
+
+/* Style the list items (list elements) */
+.custom-list li {
+    border: 1px solid #ccc; /* Add a border around each list item */
+    padding: 10px;          /* Add padding around each list item */
+    margin: 10px 0;         /* Add margin to separate list items */
+}
+.container-about{
+    /* border: 1px solid #000; 1px thin border with a solid black color */
+    /* padding: 10px;  */
+    padding-top: 50px;
+    margin-top: 50px;
+    width : 50%;
+    margin: 0 auto;
+    /* background-color : white; */
+    background-color: #f0eaed;
+    height: 100vh;
+}

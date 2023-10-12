@@ -1,11 +1,38 @@
-header{
-    /* width: 70%; */
+/* header{
+    /* width: 70%;
     margin: 0 auto;
+} */
+
+/* Add styles for the header, header-left, and header-right */
+header {
+    /* background-color: #e0d5db; */
+    background-color :#F8F8FF;
+    /* padding: 10px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.header-left {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.header-right {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 body{
-    /* background-color: darkblue; */
-    background-color: #f0eaed;
-    margin-top: 0;
+    background-color: darkblue;
+    /* background-color: #f0eaed; */
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 .heading{
@@ -38,7 +65,9 @@ h1{
     width : 70%;
     margin: 0 auto;
     /* background-color : white; */
-    background-color: #f0eaed;
+    /* background-color: #f0eaed; */
+    background-color :#F8F8FF;
+    
     height: 100vh;
 }
 .calculator{
@@ -50,21 +79,23 @@ h1{
     width: 70%;
     margin: 0 auto;
     /* background-color: white; */
-    background-color: #f0eaed;
+    /* background-color: #f0eaed; */
+    background-color :#F8F8FF;
     height: auto;
     text-align:center;
 }
 .description{
     /* background-color: yellow; */
-    background-color: #f0eaed;
+    /* background-color: #f0eaed; */
+    background-color :#F8F8FF;
     border-bottom: 1px solid #000; /* 1px thin border with a solid black color */
     /* padding-top: 10px;  */
-    width: 60%;
+    /* width: 70%; */
     margin: 0 auto;
     font-size: 13.3px;
     
     /* height: 40vh; */
-    height:30vh;
+    height:auto;
     text-align:center;
 }
 .reset-link {
@@ -101,11 +132,11 @@ h1{
     /* padding: 10px;  */
     padding-top: 50px;
     margin-top: 50px;
-    width : 50%;
+    width : 70%;
     margin: 0 auto;
     /* background-color : white; */
     background-color: #f0eaed;
-    height: 100vh;
+    height: auto;
 }
 /* calculator form css */
 

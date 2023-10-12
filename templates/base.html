@@ -1,21 +1,23 @@
 <!-- template/base.html -->
 {%load static%}
-<style>
-   
-</style>
+
+<!DOCTYPE html>
+<html>
 <head>
     <link rel="stylesheet" href="{% static 'calculator/styles.css' %}">
-
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/other_styles.css' %}"> -->
 </head>
-<header>
-    <div class= "heading">
-        <h1>PlasterPro</h1>
-    </div>
-    <div class ="navigation">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-    </div>
-</header>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>PlasterPro</h1>
+        </div>
+        <div class="header-right">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+        </div>
+    </header>
 
-{% block content %} {% endblock content %}
+    {% block content %} {% endblock content %}
+
+</body>
+</html>

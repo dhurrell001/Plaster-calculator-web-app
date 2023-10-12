@@ -48,7 +48,7 @@ h1{
     margin-bottom: 30px;
     padding: 10px; 
     width: 70%;
-    margin: 10 auto;
+    margin: 0 auto;
     /* background-color: white; */
     background-color: #f0eaed;
     height: auto;
@@ -60,7 +60,7 @@ h1{
     border-bottom: 1px solid #000; /* 1px thin border with a solid black color */
     /* padding-top: 10px;  */
     width: 60%;
-    margin: 20 auto;
+    margin: 0 auto;
     font-size: 13.3px;
     
     /* height: 40vh; */
@@ -107,3 +107,14 @@ h1{
     background-color: #f0eaed;
     height: 100vh;
 }
+/* calculator form css */
+
+/* Make the radio buttons inline with !important */
+.calculator #id_Area_of_use.radio-inline{
+    display: inline-block!important;
+}
+/* #id_Area_of_use .radio-inline label {
+    display: inline;
+    margin-right: 10px; /* Add some spacing between the labels and radio buttons */
+
+

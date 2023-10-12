@@ -29,16 +29,19 @@ def plaster_calculator(request):
             plasterType = form.cleaned_data['plasterType']
             length = form.cleaned_data['length']
             width = form.cleaned_data['width']
+            thickness = form.cleaned_data['thickness']
             # Convert coverage_by_metre to Decimal
-            coverage_by_metre = Decimal(str(plasterType.coverage_by_metre))
+            coverage_kg_per_mm_per_metre = Decimal(
+                str(plasterType.coverage_kg_per_mm_per_metre))
 
             # Convert length and width to Decimal
             length_decimal = Decimal(str(length))
             width_decimal = Decimal(str(width))
 
             # Perform division
-            plaster_amount = (length_decimal * width_decimal) / \
-                coverage_by_metre
+            total_metres = (length_decimal * width_decimal)
+            plaster_amount = (
+                total_metres * coverage_kg_per_mm_per_metre) * thickness
             plaster_description = plasterType.description
     else:
         form = PlasterCalculatorForm()

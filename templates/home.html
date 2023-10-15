@@ -19,15 +19,19 @@
 
         </form>
         {% if plaster_amount %}
-            <p>Plaster Amount Needed: {{ plaster_amount }}</p>
+            <p>Plaster Amount Needed: {{ plaster_amount }} KG</p>
+            <p>Bags needed: {{bags_needed}}</p>
         {% endif %}
     </div>
     
     <div class = "description">
-        
+        <div id = "about_text">
         {% if plaster_amount%}  <!-- Check if plaster_description is available -->
         <p>Plaster Description: {{ plaster_description }}</p>
+        
         {% endif %}
+    </div>
+        
     </div>
     
 

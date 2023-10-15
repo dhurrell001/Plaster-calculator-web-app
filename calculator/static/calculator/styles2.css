@@ -6,16 +6,20 @@
 /* Add styles for the header, header-left, and header-right */
 header {
     /* background-color: #e0d5db; */
-    background-color :#F8F8FF;
+    background-color :#f8f8ff;
     /* padding: 10px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px; 
+    padding-bottom: 10px;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
-    margin: 20px auto;
-    width: 70%;
+    margin: 0 auto;
+    width: 100%;
     border-radius: 5px;
+    position: fixed;
+    top: 0;
+    height: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-left {
@@ -30,16 +34,16 @@ header {
     padding-bottom: 10px;
 }
 body{
-    background-color: darkblue;
-    /* background-color :#F8F8FF; */
-    margin: 20px;
-    padding: 20px;
+    /* background-color: darkblue; */
+    background-color :#F8F8FF;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+   
 }
 .heading{
 
     
-    background-color: #e0d5db;
+    background-color: #f4ebf0;
     text-align: center;
     /* border-bottom: 1px solid black; */
     margin: 0;
@@ -62,9 +66,9 @@ h1{
     /* border: 1px solid #000; 1px thin border with a solid black color */
     /* padding: 10px;  */
     padding-top: 50px;
-    margin-top: 50px;
-    width : 70%;
-    margin: 0 auto;
+    
+    width : 70vw;
+    margin: 60px auto;
     /* background-color : white; */
     /* background-color: #f0eaed; */
     background-color :#F8F8FF;
@@ -78,23 +82,26 @@ h1{
     border-top: 1px solid #000; /* 1px top border with a solid black color */
     border-bottom: 1px solid #000; /* 1px bottom border with a solid black color */
     margin-bottom: 30px;
-    padding: 10px; 
-    width: 70%;
+    padding-top: 10px; 
+    padding-bottom: 30px;
+    
+    width: 70vw;
     margin: 0 auto;
     /* background-color: white; */
     /* background-color: #f0eaed; */
     background-color :#F8F8FF;
     height: auto;
     text-align:center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .description{
     /* background-color: yellow; */
     /* background-color: #f0eaed; */
     background-color :#F8F8FF;
-    border-bottom: 1px solid #000; /* 1px thin border with a solid black color */
+    /* border-bottom: 1px solid #000; 1px thin border with a solid black color */
     /* padding-top: 10px;  */
     /* width: 70%; */
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 13.3px;
     
     /* height: 40vh; */

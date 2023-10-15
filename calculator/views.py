@@ -4,6 +4,11 @@ from django.views.generic import TemplateView
 from .forms import PlasterCalculatorForm
 from .models import Plaster
 from decimal import Decimal
+import math
+
+
+def bagsNeeded(kg, bagWeight):
+    return math.ceil(kg / bagWeight)
 
 
 def index(request):
@@ -22,6 +27,7 @@ def plaster_calculator(request):
     template_name = 'home.html'
     plaster_amount = None
     plaster_description = None
+    bags_needed = None
 
     if request.method == 'POST':
         form = PlasterCalculatorForm(request.POST)
@@ -42,6 +48,7 @@ def plaster_calculator(request):
             total_metres = (length_decimal * width_decimal)
             plaster_amount = (
                 total_metres * coverage_kg_per_mm_per_metre) * thickness
+            bags_needed = bagsNeeded(plaster_amount, plasterType.plasterweight)
             plaster_description = plasterType.description
     else:
         form = PlasterCalculatorForm()
@@ -50,6 +57,7 @@ def plaster_calculator(request):
         'form': form,
         'plaster_amount': plaster_amount,
         'plaster_description': plaster_description,
+        'bags_needed': bags_needed
     }
 
     return render(request, template_name, context)

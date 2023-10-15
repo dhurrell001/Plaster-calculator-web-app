@@ -12,7 +12,7 @@
         <h2>Plaster Estimator</h2>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ plaster_form.as_p }}
             <button type="submit">ESTIMATE</button>
             <a href="{% url 'home' %}" class="reset-link">RESET</a>
             
@@ -24,20 +24,36 @@
         {% endif %}
     </div>
     
-    <div class = "description">
+    <!-- <div class = "description">
         <div id = "about_text">
-        {% if plaster_amount%}  <!-- Check if plaster_description is available -->
+        {% if plaster_amount%}   
         <p>Plaster Description: {{ plaster_description }}</p>
         
         {% endif %}
-    </div>
         
+    </div> 
+</div> -->
+    
+    <div class="calculator">
+        <form method="post">
+            {% csrf_token %}
+            {{ result_form.as_p }}
+        </form>
+        <p>{{plaster_description}}</p>
+        
+    
+    </div>
+    <div class="button-container">
+        <button class="button">TDS</button>
+        <button class="button">SDS</button>
+        <button class="button">Installation</button>
     </div>
     
+    
 
+    
 
 </div>
-
 
 
 {% endblock content %}

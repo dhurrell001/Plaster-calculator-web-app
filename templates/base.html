@@ -1,0 +1,23 @@
+<!-- template/base.html -->
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'calculator/styles2.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>PlasterPro</h1>
+        </div>
+        <div class="header-right">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+        </div>
+    </header>
+
+    {% block content %} {% endblock content %}
+
+</body>
+</html>

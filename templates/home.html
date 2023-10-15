@@ -1,2 +1,59 @@
 <!-- templates/home.html -->
-<h1>Homepage</h1>
+<!DOCTYPE html>`
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="container">
+   
+
+    <div class="calculator">
+        <h2>Plaster Estimator</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ plaster_form.as_p }}
+            <button type="submit">ESTIMATE</button>
+            <a href="{% url 'home' %}" class="reset-link">RESET</a>
+            
+
+        </form>
+        {% if plaster_amount %}
+            <p>Plaster Amount Needed: {{ plaster_amount }} KG</p>
+            <p>Bags needed: {{bags_needed}}</p>
+        {% endif %}
+    </div>
+    
+    <!-- <div class = "description">
+        <div id = "about_text">
+        {% if plaster_amount%}   
+        <p>Plaster Description: {{ plaster_description }}</p>
+        
+        {% endif %}
+        
+    </div> 
+</div> -->
+    
+    <div class="calculator">
+        <form method="post">
+            {% csrf_token %}
+            {{ result_form.as_p }}
+        </form>
+        <p>{{plaster_description}}</p>
+        
+    
+    </div>
+    <div class="button-container">
+        <button class="button">TDS</button>
+        <button class="button">SDS</button>
+        <button class="button">Installation</button>
+    </div>
+    
+    
+
+    
+
+</div>
+
+
+{% endblock content %}

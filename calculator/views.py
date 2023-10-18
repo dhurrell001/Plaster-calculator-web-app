@@ -1,10 +1,13 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+import logging
 from django.views.generic import TemplateView
 from .forms import PlasterCalculatorForm, PlasterResultForm
 from .models import Plaster
 from decimal import Decimal
 import math
+from django.conf import settings
+from django.shortcuts import get_object_or_404, render
+from django.http import Http404, FileResponse, HttpResponse
+import os
 
 
 def bagsNeeded(kg, bagWeight):
@@ -13,10 +16,6 @@ def bagsNeeded(kg, bagWeight):
 
 def CalculateArea(length, width):
     return length * width
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
 
 
 class HomePageView(TemplateView):
@@ -31,9 +30,13 @@ def plaster_calculator(request):
     template_name = 'home.html'
     plaster_description = ''
     total_metres = 0
+    plasters = None
+    selected_plaster = None
 
     if request.method == 'POST':
         plaster_form = PlasterCalculatorForm(request.POST)
+        # Get a queryset of all plasters
+        plasters = Plaster.objects.all()
 
         if plaster_form.is_valid():
             plasterType = plaster_form.cleaned_data['plasterType']
@@ -55,13 +58,16 @@ def plaster_calculator(request):
             if plaster_amount and plasterType.plasterweight:
                 bags_needed = bagsNeeded(
                     plaster_amount, plasterType.plasterweight)
+            selected_plaster = plasterType
 
             # Create a PlasterResultForm instance and populate it with the results
             result_form = PlasterResultForm({
                 'plaster_amount': plaster_amount,
                 'plaster_description': plaster_description,
                 'bags_needed': bags_needed,
-                'total_area': total_metres
+                'total_area': total_metres,
+
+
 
 
             })
@@ -74,48 +80,37 @@ def plaster_calculator(request):
         'plaster_form': plaster_form,
         'result_form': result_form,
         'plaster_description': plaster_description,
-        'total_area': total_metres
+        'total_area': total_metres,
+        'plasters': plasters,  # Include the plasters queryset in the context
+        'selected_plaster': selected_plaster,
+
 
     }
 
     return render(request, template_name, context)
 
 
-# def plaster_calculator(request):
-#     template_name = 'home.html'
-#     plaster_amount = None
-#     plaster_description = None
-#     bags_needed = None
+logger = logging.getLogger(__name__)
 
-#     if request.method == 'POST':
-#         form = PlasterCalculatorForm(request.POST)
-#         if form.is_valid():
-#             plasterType = form.cleaned_data['plasterType']
-#             length = form.cleaned_data['length']
-#             width = form.cleaned_data['width']
-#             thickness = form.cleaned_data['thickness']
-#             # Convert coverage_by_metre to Decimal
-#             coverage_kg_per_mm_per_metre = Decimal(
-#                 str(plasterType.coverage_kg_per_mm_per_metre))
 
-#             # Convert length and width to Decimal
-#             length_decimal = Decimal(str(length))
-#             width_decimal = Decimal(str(width))
+def download_plaster_pdf(request, plaster_id):
+    plaster = get_object_or_404(Plaster, pk=plaster_id)
 
-#             # Perform division
-#             total_metres = (length_decimal * width_decimal)
-#             plaster_amount = (
-#                 total_metres * coverage_kg_per_mm_per_metre) * thickness
-#             bags_needed = bagsNeeded(plaster_amount, plasterType.plasterweight)
-#             plaster_description = plasterType.description
-#     else:
-#         form = PlasterCalculatorForm()
+    try:
+        with open(plaster.pdf_file.path, 'rb') as pdf_file:
+            logger.debug("PDF file opened successfully")
+            response = FileResponse(pdf_file)
+            response['Content-Type'] = 'application/pdf'
+            response['Content-Disposition'] = f'attachment; filename="{plaster.plaster_name}.pdf"'
+            logger.debug("PDF file response created")
+            print(response)
+            return response
+    except Exception as e:
+        logger.error(f"Error serving PDF file: {e}")
 
-#     context = {
-#         'form': form,
-#         'plaster_amount': plaster_amount,
-#         'plaster_description': plaster_description,
-#         'bags_needed': bags_needed
-#     }
+    raise Http404("File not found")
 
-#     return render(request, template_name, context)
+
+def display_plaster_image(request, plaster_id):
+    plaster = Plaster.objects.get(pk=plaster_id)
+    return render(request, 'pdftest.html', {'plaster': plaster})

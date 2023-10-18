@@ -1,0 +1,787 @@
+ERROR 2023-10-16 21:00:04,458 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:00:48,752 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:01:01,695 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:02:56,049 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:06:35,950 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:06:49,295 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:09:26,644 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:10:31,645 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:11:35,266 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+ERROR 2023-10-16 21:17:00,326 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 98, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'download_plaster_pdf' with arguments '('',)' not found. 1 pattern(s) tried: ['download\\-plaster\\-pdf/(?P<plaster_id>[0-9]+)/\\Z']
+INFO 2023-10-16 21:42:39,759 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 21:43:56,126 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 17:24:28,293 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 17:24:29,686 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 17:27:43,398 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 17:27:44,184 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 17:27:55,691 autoreload Watching for file changes with StatReloader
+DEBUG 2023-10-17 17:28:36,322 views PDF file opened successfully
+DEBUG 2023-10-17 17:28:36,324 views PDF file response created
+INFO 2023-10-17 17:32:34,573 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 17:32:35,346 autoreload Watching for file changes with StatReloader
+DEBUG 2023-10-17 17:32:45,604 views PDF file opened successfully
+DEBUG 2023-10-17 17:32:45,605 views PDF file response created
+DEBUG 2023-10-17 17:38:32,752 views PDF file opened successfully
+DEBUG 2023-10-17 17:38:32,752 views PDF file response created
+DEBUG 2023-10-17 17:44:46,528 views PDF file opened successfully
+DEBUG 2023-10-17 17:44:46,544 views PDF file response created
+DEBUG 2023-10-17 17:44:57,768 views PDF file opened successfully
+DEBUG 2023-10-17 17:44:57,768 views PDF file response created
+DEBUG 2023-10-17 17:46:11,582 views PDF file opened successfully
+DEBUG 2023-10-17 17:46:11,582 views PDF file response created
+DEBUG 2023-10-17 17:46:14,056 views PDF file opened successfully
+DEBUG 2023-10-17 17:46:14,057 views PDF file response created
+DEBUG 2023-10-17 17:46:20,565 views PDF file opened successfully
+DEBUG 2023-10-17 17:46:20,565 views PDF file response created
+DEBUG 2023-10-17 17:46:36,450 views PDF file opened successfully
+DEBUG 2023-10-17 17:46:36,450 views PDF file response created
+DEBUG 2023-10-17 17:46:43,426 views PDF file opened successfully
+DEBUG 2023-10-17 17:46:43,426 views PDF file response created
+DEBUG 2023-10-17 17:47:29,563 views PDF file opened successfully
+DEBUG 2023-10-17 17:47:29,563 views PDF file response created
+DEBUG 2023-10-17 17:47:34,295 views PDF file opened successfully
+DEBUG 2023-10-17 17:47:34,296 views PDF file response created
+DEBUG 2023-10-17 17:47:54,441 views PDF file opened successfully
+DEBUG 2023-10-17 17:47:54,441 views PDF file response created
+DEBUG 2023-10-17 17:48:55,669 views PDF file opened successfully
+DEBUG 2023-10-17 17:48:55,669 views PDF file response created
+DEBUG 2023-10-17 17:49:12,648 views PDF file opened successfully
+DEBUG 2023-10-17 17:49:12,649 views PDF file response created
+INFO 2023-10-17 17:54:38,770 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 17:54:39,680 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 17:56:52,707 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\urls.py changed, reloading.
+INFO 2023-10-17 17:56:53,408 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-17 17:57:15,294 log Not Found: /serve_pdf
+DEBUG 2023-10-17 18:18:56,912 Image Importing BlpImagePlugin
+DEBUG 2023-10-17 18:18:56,912 Image Importing BmpImagePlugin
+DEBUG 2023-10-17 18:18:56,912 Image Importing BufrStubImagePlugin
+DEBUG 2023-10-17 18:18:56,927 Image Importing CurImagePlugin
+DEBUG 2023-10-17 18:18:56,927 Image Importing DcxImagePlugin
+DEBUG 2023-10-17 18:18:56,927 Image Importing DdsImagePlugin
+DEBUG 2023-10-17 18:18:56,927 Image Importing EpsImagePlugin
+DEBUG 2023-10-17 18:18:56,990 Image Importing FitsImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Importing FliImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Importing FpxImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG 2023-10-17 18:18:56,991 Image Importing FtexImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Importing GbrImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Importing GifImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Importing GribStubImagePlugin
+DEBUG 2023-10-17 18:18:56,991 Image Importing Hdf5StubImagePlugin
+DEBUG 2023-10-17 18:18:57,006 Image Importing IcnsImagePlugin
+DEBUG 2023-10-17 18:18:57,006 Image Importing IcoImagePlugin
+DEBUG 2023-10-17 18:18:57,006 Image Importing ImImagePlugin
+DEBUG 2023-10-17 18:18:57,006 Image Importing ImtImagePlugin
+DEBUG 2023-10-17 18:18:57,021 Image Importing IptcImagePlugin
+DEBUG 2023-10-17 18:18:57,021 Image Importing JpegImagePlugin
+DEBUG 2023-10-17 18:18:57,021 Image Importing Jpeg2KImagePlugin
+DEBUG 2023-10-17 18:18:57,021 Image Importing McIdasImagePlugin
+DEBUG 2023-10-17 18:18:57,021 Image Importing MicImagePlugin
+DEBUG 2023-10-17 18:18:57,021 Image Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG 2023-10-17 18:18:57,037 Image Importing MpegImagePlugin
+DEBUG 2023-10-17 18:18:57,037 Image Importing MpoImagePlugin
+DEBUG 2023-10-17 18:18:57,053 Image Importing MspImagePlugin
+DEBUG 2023-10-17 18:18:57,053 Image Importing PalmImagePlugin
+DEBUG 2023-10-17 18:18:57,068 Image Importing PcdImagePlugin
+DEBUG 2023-10-17 18:18:57,068 Image Importing PcxImagePlugin
+DEBUG 2023-10-17 18:18:57,068 Image Importing PdfImagePlugin
+DEBUG 2023-10-17 18:18:57,092 Image Importing PixarImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing PngImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing PpmImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing PsdImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing QoiImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing SgiImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing SpiderImagePlugin
+DEBUG 2023-10-17 18:18:57,100 Image Importing SunImagePlugin
+DEBUG 2023-10-17 18:18:57,116 Image Importing TgaImagePlugin
+DEBUG 2023-10-17 18:18:57,116 Image Importing TiffImagePlugin
+DEBUG 2023-10-17 18:18:57,116 Image Importing WebPImagePlugin
+DEBUG 2023-10-17 18:18:57,492 Image Importing WmfImagePlugin
+DEBUG 2023-10-17 18:18:57,508 Image Importing XbmImagePlugin
+DEBUG 2023-10-17 18:18:57,508 Image Importing XpmImagePlugin
+DEBUG 2023-10-17 18:18:57,508 Image Importing XVThumbImagePlugin
+INFO 2023-10-17 18:21:27,635 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 18:21:28,628 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 18:23:16,844 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\urls.py changed, reloading.
+INFO 2023-10-17 18:23:17,530 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-17 18:24:07,514 log Not Found: /pdftest
+ERROR 2023-10-17 18:25:44,276 log Internal Server Error: /plaster-image/1/
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 126, in display_plaster_image
+    return render(request, 'plaster_image.html', {'plaster': plaster})
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plaster_image.html
+WARNING 2023-10-17 18:25:57,097 log Not Found: /plaster-image
+INFO 2023-10-17 18:26:57,432 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 18:26:58,213 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-17 18:27:30,009 log Not Found: /display_plaster_image
+WARNING 2023-10-17 18:27:40,571 log Not Found: /plaster_image
+WARNING 2023-10-17 18:28:26,158 log Not Found: /plaster_image/1
+INFO 2023-10-17 18:36:05,168 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 18:36:06,059 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 18:36:46,541 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\urls.py changed, reloading.
+INFO 2023-10-17 18:36:47,228 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 18:36:54,630 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\urls.py changed, reloading.
+INFO 2023-10-17 18:36:55,363 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-17 18:37:24,079 log Internal Server Error: /plaster-pdf/1/
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 131, in display_plaster_pdf
+    return render(request, 'plaster_image.html', {'plaster': plaster})
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plaster_image.html
+ERROR 2023-10-17 18:41:07,858 log Internal Server Error: /plaster-pdf/1/
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 131, in display_plaster_pdf
+    return render(request, 'plaster_image.html', {'plaster': plaster})
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plaster_image.html
+ERROR 2023-10-17 18:41:09,483 log Internal Server Error: /plaster-pdf/1/
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 131, in display_plaster_pdf
+    return render(request, 'plaster_image.html', {'plaster': plaster})
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plaster_image.html
+ERROR 2023-10-17 18:41:16,447 log Internal Server Error: /plaster-pdf/1/
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 131, in display_plaster_pdf
+    return render(request, 'plaster_image.html', {'plaster': plaster})
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plaster_image.html
+ERROR 2023-10-17 18:41:34,667 log Internal Server Error: /plaster-pdf/1/
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 131, in display_plaster_pdf
+    return render(request, 'plaster_image.html', {'plaster': plaster})
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plaster_image.html
+INFO 2023-10-17 18:43:22,570 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-17 18:43:23,632 autoreload Watching for file changes with StatReloader
+DEBUG 2023-10-17 19:10:44,920 views PDF file opened successfully
+DEBUG 2023-10-17 19:10:44,921 views PDF file response created
+DEBUG 2023-10-17 19:20:24,510 views PDF file opened successfully
+DEBUG 2023-10-17 19:20:24,510 views PDF file response created
+INFO 2023-10-18 15:44:31,520 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\models.py changed, reloading.
+INFO 2023-10-18 15:44:32,901 autoreload Watching for file changes with StatReloader
+INFO 2023-10-18 15:45:35,081 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\models.py changed, reloading.
+INFO 2023-10-18 15:45:35,998 autoreload Watching for file changes with StatReloader
+INFO 2023-10-18 15:48:46,843 autoreload Watching for file changes with StatReloader
+INFO 2023-10-18 15:54:48,082 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-18 15:54:49,099 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-18 15:55:09,760 log Not Found: /selected_plaster.tds_url
+WARNING 2023-10-18 15:56:35,067 log Not Found: /selected_plaster.tds_url
+INFO 2023-10-18 16:06:11,425 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\urls.py changed, reloading.
+INFO 2023-10-18 16:06:12,410 autoreload Watching for file changes with StatReloader
+INFO 2023-10-18 16:06:27,244 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\urls.py changed, reloading.

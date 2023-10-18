@@ -18,6 +18,8 @@ class Plaster(models.Model):
         blank=True,
         null=True)
     tds_url = models.URLField(max_length=200, validators=[URLValidator()])
+    sds_url = models.URLField(max_length=200, validators=[URLValidator()])
+    install_url = models.URLField(max_length=200, validators=[URLValidator()])
 
     def __str__(self):
         return self.plaster_name

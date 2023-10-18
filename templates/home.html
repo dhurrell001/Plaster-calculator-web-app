@@ -49,13 +49,15 @@
     <div class="button-container">
         <!-- <button class="button">TDS</button> -->
         {% if selected_plaster %}
-        <!-- <a href="{% url 'download_plaster_pdf' selected_plaster.id %}" class="button">Download {{ selected_plaster.plaster_name }} PDF</a> -->
         <a href="{{selected_plaster.tds_url}}" class="button">TDS</a>
+        <a href="{{selected_plaster.sds_url}}" class="button">SDS</a>
+        <a href="{{selected_plaster.install_url}}" class="button">INSTALLATION</a>
+
 
         {% endif %}
 
-        <button class="button">SDS</button>
-        <button class="button">Installation</button>
+        <!-- <button class="button">SDS</button> -->
+        
     </div>
     
     

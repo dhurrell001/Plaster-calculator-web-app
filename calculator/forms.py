@@ -21,33 +21,25 @@ class PlasterCalculatorForm(forms.Form):
     width = forms.DecimalField(label="Please enter length in metres")
     thickness = forms.DecimalField(
         label="Please enter plaster thickness in MM")
-
-
-# class PlasterResultsForm(forms.Form):
-
-#     bags_needed = forms.DecimalField(label="Bags of plaster required")
-#     quantity_needed = forms.DecimalField(
-#         label="Quantity of plaster in KG required")
+    contingency = forms.DecimalField(label="Please enter contigency in %")
 
 
 class PlasterResultForm(forms.Form):
+
+    total_area = forms.DecimalField(
+        label="Total area in square metres",
+        required=False,
+        widget=forms.TextInput(attrs={'readonly': 'readonly'})
+    )
+
     plaster_amount = forms.DecimalField(
         label="Plaster Amount Needed in KG",
         required=False,
         widget=forms.TextInput(attrs={'readonly': 'readonly'})
     )
-    # plaster_description = forms.CharField(
-    #     label="Plaster Description",
-    #     required=False,
-    #     widget=forms.TextInput(attrs={'readonly': 'readonly'})
-    # )
+
     bags_needed = forms.DecimalField(
         label="Bags Needed",
-        required=False,
-        widget=forms.TextInput(attrs={'readonly': 'readonly'})
-    )
-    total_area = forms.DecimalField(
-        label="Total area in square metres",
         required=False,
         widget=forms.TextInput(attrs={'readonly': 'readonly'})
     )

@@ -35,6 +35,7 @@ def plaster_calculator(request):
     total_metres = 0
     plasters = None
     selected_plaster = None
+    result_form = PlasterResultForm()  # Define result_form here with a default value
 
     if request.method == 'POST':
         plaster_form = PlasterCalculatorForm(request.POST)
@@ -94,24 +95,6 @@ def plaster_calculator(request):
 
 
 logger = logging.getLogger(__name__)
-
-
-# def download_plaster_pdf(request, plaster_id):
-#     plaster = get_object_or_404(Plaster, pk=plaster_id)
-
-#     try:
-#         with open(plaster.pdf_file.path, 'rb') as pdf_file:
-#             logger.debug("PDF file opened successfully")
-#             response = FileResponse(pdf_file)
-#             response['Content-Type'] = 'application/pdf'
-#             response['Content-Disposition'] = f'attachment; filename="{plaster.plaster_name}.pdf"'
-#             logger.debug("PDF file response created")
-#             print(response)
-#             return response
-#     except Exception as e:
-#         logger.error(f"Error serving PDF file: {e}")
-
-#     raise Http404("File not found")
 
 
 def display_plaster_image(request, plaster_id):

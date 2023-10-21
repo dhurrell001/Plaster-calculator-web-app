@@ -1140,3 +1140,262 @@ INFO 2023-10-21 09:31:21,127 autoreload C:\Users\dhurr\Documents\Plaster calcula
 INFO 2023-10-21 09:31:22,011 autoreload Watching for file changes with StatReloader
 INFO 2023-10-21 11:13:11,050 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
 INFO 2023-10-21 11:13:12,488 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-21 16:48:57,479 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 93, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\utils\html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\boundfield.py", line 107, in as_widget
+    return widget.render(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 280, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 758, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 717, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 657, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\models.py", line 1403, in __iter__
+    for obj in queryset:
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\query.py", line 516, in _iterator
+    yield from iterable
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1558, in execute_sql
+    cursor = self.connection.chunked_cursor()
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\testcases.py", line 168, in __call__
+    raise DatabaseOperationForbidden(self.message)
+django.test.testcases.DatabaseOperationForbidden: Database queries to 'default' are not allowed in SimpleTestCase subclasses. Either subclass TestCase or TransactionTestCase to ensure proper test isolation or add 'default' to calculator.tests.HomepageTests.databases to silence this failure.
+ERROR 2023-10-21 16:48:57,522 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 93, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\utils\html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\boundfield.py", line 107, in as_widget
+    return widget.render(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 280, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 758, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 717, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 657, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\models.py", line 1403, in __iter__
+    for obj in queryset:
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\query.py", line 516, in _iterator
+    yield from iterable
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1558, in execute_sql
+    cursor = self.connection.chunked_cursor()
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\testcases.py", line 168, in __call__
+    raise DatabaseOperationForbidden(self.message)
+django.test.testcases.DatabaseOperationForbidden: Database queries to 'default' are not allowed in SimpleTestCase subclasses. Either subclass TestCase or TransactionTestCase to ensure proper test isolation or add 'default' to calculator.tests.HomepageTests.databases to silence this failure.
+ERROR 2023-10-21 16:48:57,542 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 93, in plaster_calculator
+    return render(request, template_name, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\utils\html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\boundfield.py", line 107, in as_widget
+    return widget.render(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 280, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 758, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 717, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\widgets.py", line 657, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\forms\models.py", line 1403, in __iter__
+    for obj in queryset:
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\query.py", line 516, in _iterator
+    yield from iterable
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1558, in execute_sql
+    cursor = self.connection.chunked_cursor()
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\test\testcases.py", line 168, in __call__
+    raise DatabaseOperationForbidden(self.message)
+django.test.testcases.DatabaseOperationForbidden: Database queries to 'default' are not allowed in SimpleTestCase subclasses. Either subclass TestCase or TransactionTestCase to ensure proper test isolation or add 'default' to calculator.tests.HomepageTests.databases to silence this failure.
+ERROR 2023-10-21 16:57:37,485 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 84, in plaster_calculator
+    'result_form': result_form,
+UnboundLocalError: local variable 'result_form' referenced before assignment
+ERROR 2023-10-21 16:59:15,598 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 84, in plaster_calculator
+    'result_form': result_form,
+UnboundLocalError: local variable 'result_form' referenced before assignment
+ERROR 2023-10-21 17:03:00,012 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 84, in plaster_calculator
+    'result_form': result_form,
+UnboundLocalError: local variable 'result_form' referenced before assignment
+ERROR 2023-10-21 17:09:22,263 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py", line 84, in plaster_calculator
+    'result_form': result_form,
+UnboundLocalError: local variable 'result_form' referenced before assignment
+WARNING 2023-10-21 17:35:54,367 log Not Found: /your_url_for_plaster_calculator/
+WARNING 2023-10-21 17:35:54,367 log Not Found: /your_url_for_plaster_calculator/
+WARNING 2023-10-21 17:35:54,367 log Not Found: /your_url_for_plaster_calculator/
+WARNING 2023-10-21 17:35:54,367 log Not Found: /your_url_for_plaster_calculator/
+WARNING 2023-10-21 17:35:54,367 log Not Found: /your_url_for_plaster_calculator/
+WARNING 2023-10-21 17:40:12,638 log Not Found: /home
+WARNING 2023-10-21 17:40:12,638 log Not Found: /home
+WARNING 2023-10-21 17:40:12,638 log Not Found: /home
+WARNING 2023-10-21 17:40:12,638 log Not Found: /home
+WARNING 2023-10-21 17:40:12,638 log Not Found: /home

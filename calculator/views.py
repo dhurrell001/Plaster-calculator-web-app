@@ -1,3 +1,6 @@
+from django.shortcuts import get_object_or_404
+from django.http import FileResponse
+from django.http import HttpResponse
 import logging
 from django.views.generic import TemplateView
 from .forms import PlasterCalculatorForm, PlasterResultForm
@@ -93,24 +96,46 @@ def plaster_calculator(request):
 logger = logging.getLogger(__name__)
 
 
-def download_plaster_pdf(request, plaster_id):
-    plaster = get_object_or_404(Plaster, pk=plaster_id)
+# def download_plaster_pdf(request, plaster_id):
+#     plaster = get_object_or_404(Plaster, pk=plaster_id)
 
-    try:
-        with open(plaster.pdf_file.path, 'rb') as pdf_file:
-            logger.debug("PDF file opened successfully")
-            response = FileResponse(pdf_file)
-            response['Content-Type'] = 'application/pdf'
-            response['Content-Disposition'] = f'attachment; filename="{plaster.plaster_name}.pdf"'
-            logger.debug("PDF file response created")
-            print(response)
-            return response
-    except Exception as e:
-        logger.error(f"Error serving PDF file: {e}")
+#     try:
+#         with open(plaster.pdf_file.path, 'rb') as pdf_file:
+#             logger.debug("PDF file opened successfully")
+#             response = FileResponse(pdf_file)
+#             response['Content-Type'] = 'application/pdf'
+#             response['Content-Disposition'] = f'attachment; filename="{plaster.plaster_name}.pdf"'
+#             logger.debug("PDF file response created")
+#             print(response)
+#             return response
+#     except Exception as e:
+#         logger.error(f"Error serving PDF file: {e}")
 
-    raise Http404("File not found")
+#     raise Http404("File not found")
 
 
 def display_plaster_image(request, plaster_id):
     plaster = Plaster.objects.get(pk=plaster_id)
     return render(request, 'pdftest.html', {'plaster': plaster})
+
+
+def view_pdf(request, plaster_id):
+    # Retrieve the Plaster object with the specified 'plaster_id'
+    plaster = get_object_or_404(Plaster, pk=plaster_id)
+
+    # Ensure that the plaster has a PDF file associated with it
+    if plaster.pdf_file:
+        # Create a FileResponse object to serve the PDF file
+        response = FileResponse(
+            plaster.pdf_file, content_type='application/pdf')
+
+        # Set the Content-Disposition header to 'inline'
+        # This tells the browser to display the file in the browser window if possible
+        response['Content-Disposition'] = f'inline; filename="{plaster.pdf_file.name}"'
+
+        # Return the 'response' object to serve the PDF file
+        return response
+    else:
+        # If the plaster doesn't have a PDF file, return an HTTP response
+        # indicating that the PDF file was not found
+        return HttpResponse("PDF not found")

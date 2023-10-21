@@ -1,0 +1,10 @@
+Kilograms per Square Meter per Millimeter (Kg/m²/mm) = (Bag Weight in Kilograms / Coverage in Square Meters) / Thickness in Millimeters
+
+In this formula:
+
+Bag Weight in Kilograms is the weight of one bag of plaster (e.g., 25 kg).
+Coverage in Square Meters is the area that one bag of plaster can cover (e.g., 3 m²).
+Thickness in Millimeters is the desired thickness of the plaster layer (e.g., 1 mm).
+By using this formula, you can calculate how many kilograms of plaster are needed to cover a certain area at a specific thickness.
+
+

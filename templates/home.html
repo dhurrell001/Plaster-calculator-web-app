@@ -10,29 +10,50 @@
 
     <div class="calculator">
         <h2>Plaster Estimator</h2>
-        <form method="post">
+        
+    <form method="post">
+        {% csrf_token %}
+        <!-- loop to display radio buttons side by side. had trouble formatting the
+        form.as.p template all other field have to be displayed individualy and formatted -->
+        {% for radio in plaster_form.Area_of_use %}
+            <label for="{{ radio.id }}">
+                {{ radio.choice_label }}
+                {{ radio.tag }}
+            </label>
+        {% endfor %}
+        <p>{{plaster_form.plasterType.label}}   {{ plaster_form.plasterType }}</p>
+        <p>{{plaster_form.length.label}}    {{ plaster_form.length }}</p>
+       <p>{{plaster_form.width.label}} {{ plaster_form.width }}</p> 
+        <p>{{plaster_form.thickness.label}} {{ plaster_form.thickness }}</p>
+        <p>{{plaster_form.contingency.label}}   {{plaster_form.contingency}}</p>
+        <div class="centered-button-container">
+            <button type="submit" class="reset-link">ESTIMATE</button>
+            <a href="{% url 'home' %}" class="reset-link">RESET</a>
+            
+        </div>
+        
+    </form>
+    
+        <!-- <form method="post">
             {% csrf_token %}
+            {% for radio in plaster_form.Area_of_use %}
+                <label for="{{ radio.id }}">
+                    {{ radio.choice_label }}
+                    {{ radio.tag }}
+                </label>
+            {% endfor %}
             {{ plaster_form.as_p }}
             <button type="submit">ESTIMATE</button>
             <a href="{% url 'home' %}" class="reset-link">RESET</a>
-            
+             -->
 
         </form>
+   
         {% if plaster_amount %}
             <p>Plaster Amount Needed: {{ plaster_amount }} KG</p>
             <p>Bags needed: {{bags_needed}}</p>
         {% endif %}
     </div>
-    
-    <!-- <div class = "description">
-        <div id = "about_text">
-        {% if plaster_amount%}   
-        <p>Plaster Description: {{ plaster_description }}</p>
-        
-        {% endif %}
-        
-    </div> 
-</div> -->
     
     <div class="calculator">
         <form method="post">
@@ -40,19 +61,26 @@
             {{ result_form.as_p }}
         </form>
         <p>{{plaster_description}}</p>
+        {% if selected_plaster.plaster_image %}
+        <img src="{{ selected_plaster.plaster_image.url }}" alt="Plaster Image">
+        {% endif %}   
         
     
     </div>
+   
     <div class="button-container">
-        <button class="button">TDS</button>
-        <button class="button">SDS</button>
-        <button class="button">Installation</button>
+        
+        {% if selected_plaster %}
+        <a href="{{selected_plaster.tds_url}}" class="button">TDS</a>
+        <a href="{{selected_plaster.sds_url}}" class="button">SDS</a>
+        <a href="{{selected_plaster.install_url}}" class="button">INSTALLATION</a>
+        <a href="{% url 'view_pdf' selected_plaster.id %}">View PDF</a>
+
+        {% endif %}
+
+        
     </div>
     
-    
-
-    
-
 </div>
 
 

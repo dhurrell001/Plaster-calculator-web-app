@@ -12,6 +12,8 @@ from django.shortcuts import get_object_or_404, render
 from django.http import Http404, FileResponse, HttpResponse
 import os
 
+logger = logging.getLogger(__name__)
+
 
 def bagsNeeded(kg, bagWeight):
     return math.ceil(kg / bagWeight)
@@ -19,6 +21,10 @@ def bagsNeeded(kg, bagWeight):
 
 def CalculateArea(length, width):
     return length * width
+
+
+def CalculatePlasterAmount(total_metres, coverage_kg_per_mm_per_metre, thickness):
+    return (total_metres * coverage_kg_per_mm_per_metre) * thickness
 
 
 class HomePageView(TemplateView):
@@ -54,8 +60,9 @@ def plaster_calculator(request):
             width_decimal = Decimal(str(width))
 
             total_metres = (length_decimal * width_decimal)
-            plaster_amount = (
-                total_metres * coverage_kg_per_mm_per_metre) * thickness
+            plaster_amount = CalculatePlasterAmount(
+                total_metres, coverage_kg_per_mm_per_metre, thickness)
+
             plaster_description = plasterType.description
 
             # Calculate bags needed
@@ -70,10 +77,6 @@ def plaster_calculator(request):
                 'plaster_description': plaster_description,
                 'bags_needed': bags_needed,
                 'total_area': total_metres,
-
-
-
-
             })
 
     else:
@@ -87,14 +90,9 @@ def plaster_calculator(request):
         'total_area': total_metres,
         'plasters': plasters,  # Include the plasters queryset in the context
         'selected_plaster': selected_plaster,
-
-
     }
 
     return render(request, template_name, context)
-
-
-logger = logging.getLogger(__name__)
 
 
 def display_plaster_image(request, plaster_id):

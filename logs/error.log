@@ -1417,3 +1417,5 @@ WARNING 2023-10-26 16:18:14,269 log Not Found: /favicon.ico
 INFO 2023-10-26 16:19:53,795 autoreload Watching for file changes with StatReloader
 INFO 2023-10-26 16:31:18,238 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\forms.py changed, reloading.
 INFO 2023-10-26 16:31:19,122 autoreload Watching for file changes with StatReloader
+INFO 2023-10-26 17:00:43,991 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-26 17:00:45,208 autoreload Watching for file changes with StatReloader

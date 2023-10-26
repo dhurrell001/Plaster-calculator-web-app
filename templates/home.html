@@ -51,6 +51,7 @@
    
         {% if plaster_amount %}
             <p>Plaster Amount Needed: {{ plaster_amount }} KG</p>
+            <p>Contingency amount needed: {{contingency_needed}}</p>
             <p>Bags needed: {{bags_needed}}</p>
         {% endif %}
     </div>
@@ -60,11 +61,16 @@
             {% csrf_token %}
             {{ result_form.as_p }}
         </form>
-        <p>{{plaster_description}}</p>
-        {% if selected_plaster.plaster_image %}
-        <img src="{{ selected_plaster.plaster_image.url }}" alt="Plaster Image">
-        {% endif %}   
-        
+        <div class="description-container">
+            <div class="description">
+                <p>{{ plaster_description }}</p>
+            </div>
+            <div class="image-container">
+                {% if selected_plaster.plaster_image %}
+                    <img src="{{ selected_plaster.plaster_image.url }}" alt="Plaster Image" class="custom-image">
+                {% endif %}
+            </div>
+        </div>
     
     </div>
    

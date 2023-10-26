@@ -1402,3 +1402,18 @@ WARNING 2023-10-21 17:40:12,638 log Not Found: /home
 INFO 2023-10-21 18:34:36,625 autoreload Watching for file changes with StatReloader
 INFO 2023-10-21 18:37:34,744 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
 INFO 2023-10-21 18:37:35,660 autoreload Watching for file changes with StatReloader
+INFO 2023-10-26 15:18:26,320 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-26 15:18:50,775 log Not Found: /favicon.ico
+WARNING 2023-10-26 15:19:39,180 log Not Found: /favicon.ico
+WARNING 2023-10-26 15:25:13,446 log Not Found: /favicon.ico
+WARNING 2023-10-26 15:26:07,210 log Not Found: /favicon.ico
+WARNING 2023-10-26 15:28:31,804 log Not Found: /favicon.ico
+WARNING 2023-10-26 15:37:09,620 log Not Found: /favicon.ico
+INFO 2023-10-26 16:11:35,205 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\forms.py changed, reloading.
+INFO 2023-10-26 16:11:36,433 autoreload Watching for file changes with StatReloader
+INFO 2023-10-26 16:16:31,972 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\views.py changed, reloading.
+INFO 2023-10-26 16:16:33,056 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-26 16:18:14,269 log Not Found: /favicon.ico
+INFO 2023-10-26 16:19:53,795 autoreload Watching for file changes with StatReloader
+INFO 2023-10-26 16:31:18,238 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\calculator\forms.py changed, reloading.
+INFO 2023-10-26 16:31:19,122 autoreload Watching for file changes with StatReloader

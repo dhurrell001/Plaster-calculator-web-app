@@ -37,6 +37,11 @@ class PlasterResultForm(forms.Form):
         required=False,
         widget=forms.TextInput(attrs={'readonly': 'readonly'})
     )
+    contingency_needed = forms.DecimalField(
+        label="Contingency Amount Needed in KG",
+        required=False,
+        widget=forms.TextInput(attrs={'readonly': 'readonly'})
+    )
 
     bags_needed = forms.DecimalField(
         label="Bags Needed",

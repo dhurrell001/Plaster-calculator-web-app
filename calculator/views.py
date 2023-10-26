@@ -27,6 +27,10 @@ def CalculatePlasterAmount(total_metres, coverage_kg_per_mm_per_metre, thickness
     return (total_metres * coverage_kg_per_mm_per_metre) * thickness
 
 
+def CalculateContingency(plaster_amount, contingency):
+    return (contingency/100) * plaster_amount
+
+
 class HomePageView(TemplateView):
     template_name = "home.html"
 
@@ -49,19 +53,27 @@ def plaster_calculator(request):
         plasters = Plaster.objects.all()
 
         if plaster_form.is_valid():
+
             plasterType = plaster_form.cleaned_data['plasterType']
             length = plaster_form.cleaned_data['length']
             width = plaster_form.cleaned_data['width']
             thickness = plaster_form.cleaned_data['thickness']
+            contingency = plaster_form.cleaned_data['contingency']
 
             coverage_kg_per_mm_per_metre = Decimal(
                 str(plasterType.coverage_kg_per_mm_per_metre))
+
             length_decimal = Decimal(str(length))
             width_decimal = Decimal(str(width))
 
-            total_metres = (length_decimal * width_decimal)
+            # ----------------------- Calculations ------------------
+
+            total_metres = CalculateArea(length_decimal, width_decimal)
+
             plaster_amount = CalculatePlasterAmount(
                 total_metres, coverage_kg_per_mm_per_metre, thickness)
+            contingency_needed = CalculateContingency(
+                plaster_amount, contingency)
 
             plaster_description = plasterType.description
 
@@ -71,12 +83,14 @@ def plaster_calculator(request):
                     plaster_amount, plasterType.plasterweight)
             selected_plaster = plasterType
 
+            # ---------------------- Populate forms--------------------------
             # Create a PlasterResultForm instance and populate it with the results
             result_form = PlasterResultForm({
                 'plaster_amount': plaster_amount,
                 'plaster_description': plaster_description,
                 'bags_needed': bags_needed,
                 'total_area': total_metres,
+                'contingency_needed': contingency_needed,
             })
 
     else:

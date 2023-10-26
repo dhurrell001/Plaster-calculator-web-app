@@ -1,5 +1,13 @@
 
 /* Add styles for the header, header-left, and header-right */
+
+body{
+    /* background-color: darkblue; */
+    background-color :#F8F8FF;
+    margin-right:  20px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
 header {
     /* background-color: #e0d5db; */
     background-color :#f8f8ff;
@@ -29,13 +37,7 @@ header {
     padding-right: 20px;
     padding-bottom: 10px;
 }
-body{
-    /* background-color: darkblue; */
-    background-color :#F8F8FF;
-    margin-right:  20px;
-    font-family: Arial, Helvetica, sans-serif;
-   
-}
+
 .heading{
 
     
@@ -103,21 +105,44 @@ h2 {
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-.description{
-    /* background-color: yellow; */
-    /* background-color: #f0eaed; */
-    background-color :#F8F8FF;
-    /* border-bottom: 1px solid #000; 1px thin border with a solid black color */
-    /* padding-top: 10px;  */
-    /* width: 70%; */
-    margin: 20px auto;
-    font-size: 13.3px;
-    
-    /* height: 40vh; */
-    height:auto;
-    text-align:center;
-    border-radius: 5px;
+/* Style for the description and image container */
+.description-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
+
+/* Style for the description */
+.description {
+    width: 70%; 
+    text-align: center;
+    margin: 50px auto;
+    font-size: 18px;
+    padding-right: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 30px;
+}
+
+/* Style for the image container */
+.image-container {
+    width: 30%; 
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+
+.image-container img {
+    float: left;
+    margin-left: 10px; 
+}
+/* Style for the custom image */
+.custom-image {
+    width: 150px; 
+    height: auto; 
+}
+
+
 .reset-link {
     display: inline-block;
     padding: 2px;
@@ -135,10 +160,10 @@ h2 {
     background-color: #eee;
 }
 
-/* about page css */
+
 /* Target the unordered list with the "custom-list" class */
 .custom-list {
-    /* list-style-type: disc; You can change the list style type */
+    
     padding-left: 20px;   /* Add padding to the left of the list */
     list-style-type: none;
 

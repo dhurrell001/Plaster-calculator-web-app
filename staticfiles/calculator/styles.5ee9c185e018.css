@@ -1,0 +1,162 @@
+/* header{
+    /* width: 70%;
+    margin: 0 auto;
+} */
+
+/* Add styles for the header, header-left, and header-right */
+header {
+    /* background-color: #e0d5db; */
+    background-color :#F8F8FF;
+    /* padding: 10px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.header-left {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.header-right {
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+body{
+    background-color: darkblue;
+    /* background-color :#F8F8FF; */
+    margin: 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading{
+
+    
+    background-color: #e0d5db;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    margin: 0;
+    padding-top: 10px;
+}
+.navigation{
+    text-align: left;
+    /* background-color: beige; */
+    background-color: #e0d5db;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+h1{
+    /* padding-top: 5px; */
+    margin: 0;
+} 
+
+/* home page css */
+.container{
+    /* border: 1px solid #000; 1px thin border with a solid black color */
+    /* padding: 10px;  */
+    padding-top: 50px;
+    margin-top: 50px;
+    width : 70%;
+    margin: 0 auto;
+    /* background-color : white; */
+    /* background-color: #f0eaed; */
+    background-color :#F8F8FF;
+    border-radius: 5px;
+    
+    height: 100vh;
+    /* height: auto; */
+}
+.calculator{
+ /* border: 1px solid #000; 1px thin border with a solid black color */
+    border-top: 1px solid #000; /* 1px top border with a solid black color */
+    border-bottom: 1px solid #000; /* 1px bottom border with a solid black color */
+    margin-bottom: 30px;
+    padding: 10px; 
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: white; */
+    /* background-color: #f0eaed; */
+    background-color :#F8F8FF;
+    height: auto;
+    text-align:center;
+}
+.description{
+    /* background-color: yellow; */
+    /* background-color: #f0eaed; */
+    background-color :#F8F8FF;
+    border-bottom: 1px solid #000; /* 1px thin border with a solid black color */
+    /* padding-top: 10px;  */
+    /* width: 70%; */
+    margin: 0 auto;
+    font-size: 13.3px;
+    
+    /* height: 40vh; */
+    height:auto;
+    text-align:center;
+    border-radius: 5px;
+}
+.reset-link {
+    display: inline-block;
+    padding: 2px;
+    background-color: #e5e1e1;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    font-size: 13.3px;
+}
+
+.reset-link:hover {
+    background-color: #eee;
+}
+
+/* about page css */
+/* Target the unordered list with the "custom-list" class */
+.custom-list {
+    /* list-style-type: disc; You can change the list style type */
+    padding-left: 20px;   /* Add padding to the left of the list */
+    list-style-type: none;
+
+}
+
+/* Style the list items (list elements) */
+.custom-list li {
+    border: 1px solid #ccc; /* Add a border around each list item */
+    padding: 10px;          /* Add padding around each list item */
+    margin: 10px 0;         /* Add margin to separate list items */
+}
+.container-about{
+    /* border: 1px solid #000; 1px thin border with a solid black color */
+    /* padding: 10px;  */
+    padding-top: 50px;
+    margin-top: 50px;
+    width : 70%;
+    margin: 0 auto;
+    /* background-color : white; */
+    background-color: #f0eaed;
+    height: auto;
+    border-radius: 5px;
+}
+#about_text{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+/* calculator form css */
+
+/* Make the radio buttons inline with !important */
+.calculator #id_Area_of_use.radio-inline{
+    display: inline-block!important;
+}
+/* #id_Area_of_use .radio-inline label {
+    display: inline;
+    margin-right: 10px; /* Add some spacing between the labels and radio buttons */
+
+

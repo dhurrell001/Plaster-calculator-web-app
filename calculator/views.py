@@ -15,8 +15,8 @@ import os
 logger = logging.getLogger(__name__)
 
 
-def bagsNeeded(kg, bagWeight):
-    return math.ceil(kg / bagWeight)
+def bagsNeeded(plaster_amount_kg, contingency, bagWeight):
+    return math.ceil((plaster_amount_kg + contingency) / bagWeight)
 
 
 def CalculateArea(length, width):
@@ -50,18 +50,25 @@ def plaster_calculator(request):
     if request.method == 'POST':
         plaster_form = PlasterCalculatorForm(request.POST)
         # Get a queryset of all plasters
-        plasters = Plaster.objects.all()
+       # plasters = Plaster.objects.all()
 
         if plaster_form.is_valid():
 
-            plasterType = plaster_form.cleaned_data['plasterType']
+            # get the selected radio button value
+            area_of_use = plaster_form.cleaned_data.get('Area_of_use')
+            # print(area_of_use)
+            # Filter the Plasters queryset based on area_of_use
+            plasters = Plaster.objects.filter(plaster_type=area_of_use)
+            print(plasters)
+
+            selected_plaster = plaster_form.cleaned_data['plasterType']
             length = plaster_form.cleaned_data['length']
             width = plaster_form.cleaned_data['width']
             thickness = plaster_form.cleaned_data['thickness']
             contingency = plaster_form.cleaned_data['contingency']
 
             coverage_kg_per_mm_per_metre = Decimal(
-                str(plasterType.coverage_kg_per_mm_per_metre))
+                str(selected_plaster.coverage_kg_per_mm_per_metre))
 
             length_decimal = Decimal(str(length))
             width_decimal = Decimal(str(width))
@@ -75,13 +82,13 @@ def plaster_calculator(request):
             contingency_needed = CalculateContingency(
                 plaster_amount, contingency)
 
-            plaster_description = plasterType.description
+            plaster_description = selected_plaster.description
 
             # Calculate bags needed
-            if plaster_amount and plasterType.plasterweight:
+            if plaster_amount and selected_plaster.plasterweight:
                 bags_needed = bagsNeeded(
-                    plaster_amount, plasterType.plasterweight)
-            selected_plaster = plasterType
+                    plaster_amount, contingency_needed, selected_plaster.plasterweight)
+            selected_plaster = selected_plaster
 
             # ---------------------- Populate forms--------------------------
             # Create a PlasterResultForm instance and populate it with the results
@@ -103,6 +110,7 @@ def plaster_calculator(request):
         'plaster_description': plaster_description,
         'total_area': total_metres,
         'plasters': plasters,  # Include the plasters queryset in the context
+        # 'plasterType': plasterType,
         'selected_plaster': selected_plaster,
     }
 

@@ -14,7 +14,6 @@ class PlasterCalculatorForm(forms.Form):
         widget=forms.RadioSelect(attrs={'class': 'radio-inline'}),
         label="Area of Use"
     )
-
     plasterType = forms.ModelChoiceField(
         queryset=Plaster.objects.all(), empty_label="Select a plaster", label="Plaster Type")
     length = forms.DecimalField(label="Please enter length in metres")

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import dj_database_url
 from dotenv import load_dotenv
 from django.conf.urls.static import static
 from django.conf import settings
@@ -60,10 +61,14 @@ load_dotenv(env_path)
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!@%miuv_2wr5n92_7!%wl(b+0xxxb+s$d7%m&%!p3w!&_k&x^#'
-
+# SECRET_KEY = 'django-insecure-!@%miuv_2wr5n92_7!%wl(b+0xxxb+s$d7%m&%!p3w!&_k&x^#'
+# new key for deployment
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8_a+-$4w1f^lt3lx1c@d*p4x$ymm_rn7pwb87')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Turn off debug for deployment
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = []
 
@@ -174,3 +179,11 @@ MEDIA_URL = '/media/'
 # Define the directory where uploaded media files will be stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 print(MEDIA_ROOT)
+
+# Update database configuration from $DATABASE_URL environment variable (if defined)
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES['default'] = dj_database_url.config(
+        conn_max_age=500,
+        conn_health_checks=True,
+    )

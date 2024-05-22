@@ -1475,3 +1475,4 @@ INFO 2024-05-09 21:16:34,746 autoreload Watching for file changes with StatReloa
 INFO 2024-05-09 21:17:04,893 autoreload Watching for file changes with StatReloader
 WARNING 2024-05-09 21:18:43,119 log Not Found: /favicon.ico
 INFO 2024-05-22 11:24:39,605 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 11:24:55,644 log Not Found: /favicon.ico

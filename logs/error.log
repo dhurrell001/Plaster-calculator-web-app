@@ -1727,3 +1727,30 @@ ValueError: Missing staticfiles manifest entry for 'calculator/styles2.css'
 INFO 2024-05-22 17:53:25,055 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\plasterCalculator\settings.py changed, reloading.
 INFO 2024-05-22 17:53:26,133 autoreload Watching for file changes with StatReloader
 INFO 2024-05-22 18:01:41,720 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 18:07:58,062 log Not Found: /favicon.ico
+INFO 2024-05-22 18:08:31,174 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 18:09:59,752 log Not Found: /favicon.ico
+WARNING 2024-05-22 18:15:46,635 log Not Found: /favicon.ico
+WARNING 2024-05-22 18:18:12,916 log Not Found: /favicon.ico
+INFO 2024-05-22 18:18:28,889 autoreload Watching for file changes with StatReloader
+INFO 2024-05-22 18:19:48,748 autoreload Watching for file changes with StatReloader
+INFO 2024-05-22 19:30:57,403 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 19:31:49,038 base Session data corrupted
+WARNING 2024-05-22 19:31:49,089 base Session data corrupted
+WARNING 2024-05-22 19:31:54,185 base Session data corrupted
+WARNING 2024-05-22 19:33:24,432 log Not Found: /favicon.ico
+INFO 2024-05-22 19:34:46,471 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 19:35:07,992 log Not Found: /favicon.ico
+WARNING 2024-05-22 19:35:41,368 log Not Found: /favicon.ico
+INFO 2024-05-22 19:46:01,859 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 19:49:49,746 log Not Found: /favicon.ico
+WARNING 2024-05-22 19:55:54,374 log Not Found: /favicon.ico
+INFO 2024-05-22 19:56:09,226 autoreload Watching for file changes with StatReloader
+INFO 2024-05-22 19:57:29,828 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-22 19:57:42,897 log Not Found: /favicon.ico
+INFO 2024-05-22 20:06:22,437 autoreload Watching for file changes with StatReloader
+INFO 2024-05-22 20:24:01,032 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\plasterCalculator\settings.py changed, reloading.
+INFO 2024-05-22 20:24:02,980 autoreload Watching for file changes with StatReloader
+INFO 2024-05-22 20:26:40,113 autoreload C:\Users\dhurr\Documents\Plaster calculator web app\plasterCalculator\settings.py changed, reloading.
+INFO 2024-05-22 20:26:41,367 autoreload Watching for file changes with StatReloader
+INFO 2024-05-22 20:31:01,111 autoreload Watching for file changes with StatReloader

@@ -17,7 +17,7 @@ class PlasterCalculatorForm(forms.Form):
     plasterType = forms.ModelChoiceField(
         queryset=Plaster.objects.all(), empty_label="Select a plaster", label="Plaster Type")
     length = forms.DecimalField(label="Please enter length in metres")
-    width = forms.DecimalField(label="Please enter length in metres")
+    width = forms.DecimalField(label="Please enter width in metres")
     thickness = forms.DecimalField(
         label="Please enter plaster thickness in MM")
     contingency = forms.DecimalField(label="Please enter contigency in %")
